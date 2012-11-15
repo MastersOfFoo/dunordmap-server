@@ -1,27 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'rails', '3.2.9'
+gem 'actionpack', '3.2.9'
+gem 'activerecord', '3.2.9'
+gem 'strong_parameters', github: 'rails/strong_parameters'
+gem 'etagger', github: 'rails/etagger'
+gem 'active_model_serializers', github: 'josevalim/active_model_serializers'
 
-# Bundle edge Rails instead:
-# gem 'rails', :git => 'git://github.com/rails/rails.git'
+group :development do
+  gem 'sqlite3'
+end
 
-gem 'sqlite3'
-
-
-
-
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# To use Jbuilder templates for JSON
-# gem 'jbuilder'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano'
-
-# To use debugger
-# gem 'debugger'
+group :production do
+  gem 'pg'
+  gem 'dalli'
+end
