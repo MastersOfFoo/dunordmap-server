@@ -17,8 +17,8 @@ ActiveRecord::Schema.define(:version => 20121118021627) do
     t.string   "name"
     t.string   "image"
     t.string   "history"
-    t.string   "latitude"
-    t.string   "longitude"
+    t.float    "latitude"
+    t.float    "longitude"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

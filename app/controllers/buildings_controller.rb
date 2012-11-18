@@ -10,7 +10,7 @@ class BuildingsController < ApplicationController
   # GET /buildings/search
   # GET /buildings/search.json
   def search
-    @buildings = Building.search(params[:latitude], params[:longitude])
+    @buildings = Building.search(params[:longitude], params[:latitude])
 
     render json: @buildings
   end
