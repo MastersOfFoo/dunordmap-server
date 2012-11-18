@@ -6,6 +6,8 @@ gem 'strong_parameters', github: 'rails/strong_parameters'
 gem 'etagger', github: 'rails/etagger'
 gem 'active_model_serializers', github: 'josevalim/active_model_serializers'
 
+gem 'kdtree'
+
 group :development do
   gem 'sqlite3'
 end
