@@ -19,7 +19,6 @@ module DunordmapServer
     config.middleware.delete "ActionDispatch::Cookies"
     config.middleware.delete "ActionDispatch::Session::CookieStore"
     config.middleware.delete "Rack::MethodOverride"
-    config.middleware.use    "ActiveRecord::SchemaVersion"
 
     config.generators do |g|
       g.orm             :active_record
