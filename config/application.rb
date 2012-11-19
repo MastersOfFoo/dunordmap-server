@@ -26,6 +26,7 @@ module DunordmapServer
       g.test_framework  nil
       g.stylesheets     false
       g.assets          false
+      g.helper          false
     end
   end
 end

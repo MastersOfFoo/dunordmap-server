@@ -2,9 +2,11 @@ class BuildingsController < ApplicationController
   # GET /buildings
   # GET /buildings.json
   def index
-    @buildings = Building.all
+    @buildings = Building.scoped
 
-    render json: @buildings
+    if stale? last_modified: @buildings.maximum(:updated_at)
+      render json: @buildings
+    end
   end
 
   # GET /buildings/search
@@ -12,7 +14,9 @@ class BuildingsController < ApplicationController
   def search
     @buildings = Building.search(params[:longitude], params[:latitude])
 
-    render json: @buildings
+    if stale? last_modified: @buildings.maximum(:updated_at)
+      render json: @buildings
+    end
   end
 
   # GET /buildings/1
@@ -20,7 +24,9 @@ class BuildingsController < ApplicationController
   def show
     @building = Building.find(params[:id])
 
-    render json: @building
+    if stale? @building
+      render json: @building
+    end
   end
 
   # POST /buildings
