@@ -6,9 +6,16 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Building.where(longitude: -74.85133564680679, latitude: 11.018025225768573, name: 'Casa Blanca').first_or_create
-Building.where(longitude: -74.85142535180726, latitude: 11.018521515497374, name: 'Bloque A').first_or_create
-Building.where(longitude: -74.85133564680679, latitude: 11.018793674025540, name: 'Bloque B').first_or_create
+Building.where(longitude: -74.85133564680679, latitude: 11.018025225768573, name: 'Edificio Principal').first_or_create.tap do |building|
+  building.places.first_or_create(name: 'Direccion Financiera')
+  building.places.first_or_create(name: 'Contabilidad')
+end
+Building.where(longitude: -74.85142535180726, latitude: 11.018521515497374, name: 'Bloque A').first_or_create.tap do |building|
+
+end
+Building.where(longitude: -74.85133564680679, latitude: 11.018793674025540, name: 'Bloque B').first_or_create.tap do |building|
+
+end
 Building.where(longitude: -74.85126225180640, latitude: 11.019033813694275, name: 'Bloque C').first_or_create
 Building.where(longitude: -74.85045490680214, latitude: 11.018265366064451, name: 'Bloque D').first_or_create
 Building.where(longitude: -74.85034889180159, latitude: 11.018521515497374, name: 'Bloque E').first_or_create
@@ -21,6 +28,7 @@ Building.where(longitude: -74.85065878180322, latitude: 11.020114439778229, name
 Building.where(longitude: -74.85027549680120, latitude: 11.018905739228677, name: 'DuNord Plaza').first_or_create
 Building.where(longitude: -74.85044675180211, latitude: 11.017785085276735, name: 'Biblioteca').first_or_create
 
+#
 
 # Missing information:
 # Bloque J, L
