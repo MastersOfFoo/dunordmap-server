@@ -10,7 +10,7 @@
 #Edificio Principal
 #_________________________________________________________________________________________________
 Building.where(longitude: -74.85133564680679, latitude: 11.018025225768573, name: 'Edificio Principal').first_or_create.tap do |building|
-  building.update_attributes('Rector José Tcherassi y el presidente Misael Pastrana Borrero colocan la primera piedra de la ciudadela universitaria, 20 de noviembre de 1971. A Finales del año1972 se realizó la ignaguración de este primer edificio junto con el Bloque A')
+  building.update_attributes(history: 'Rector José Tcherassi y el presidente Misael Pastrana Borrero colocan la primera piedra de la ciudadela universitaria, 20 de noviembre de 1971. A Finales del año1972 se realizó la ignaguración de este primer edificio junto con el Bloque A')
   building.places.where(name: 'Direccion Financiera').first_or_create
   building.places.where(name: 'Contabilidad').first_or_create
   building.places.where(name: 'Contabilidad').first_or_create
@@ -205,7 +205,7 @@ end
 # Bloque G
 #_________________________________________________________________________________________________
 Building.where(longitude: -74.85003084679991, latitude: 11.019674185186089, name: 'Bloque G').first_or_create.tap do |building|
-  building.update_attributes(history: 'Durante el 2006 se realizaron importantes eventos conmemorativos como la inauguración del nuevo Edificio de Postgrados, una estructura de 8.459 metros cuadrados, dotada con aplicaciones y sistemas de la más alta tecnología y la primera')
+  building.update_attributes(image: 'http://dunordmap.s3.amazonaws.com/bloque_g.jpg', history: 'Durante el 2006 se realizaron importantes eventos conmemorativos como la inauguración del nuevo Edificio de Postgrados, una estructura de 8.459 metros cuadrados, dotada con aplicaciones y sistemas de la más alta tecnología y la primera')
   building.places.where(name: 'Salones del CEC').first_or_create
   building.places.where(name: 'Centro de Educación Continuada – CEC').first_or_create
   building.places.where(name: 'Admisiones').first_or_create
