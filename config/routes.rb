@@ -5,9 +5,9 @@ DunordmapServer::Application.routes.draw do
         get :search, on: :collection
       end
 
-      resources :restaurants
-
       resources :computer_rooms, only: [:index]
+
+      resources :food_venues
     end
   end
 end

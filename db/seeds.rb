@@ -59,7 +59,7 @@ end
 # Bloque B
 #_________________________________________________________________________________________________
 Building.where(longitude: -74.85133564680679, latitude: 11.018793674025540, name: 'Bloque B').first_or_create.tap do |building|
-  bulding.update_attributes(image: 'http://dunordmap.s3.amazonaws.com/bloque_b.jpg', history: 'En el período del rector Boris Rosanía Salive quien inicia la construcción de este edificio la cual fue finalizada en el año 1975')
+  building.update_attributes(image: 'http://dunordmap.s3.amazonaws.com/bloque_b.jpg', history: 'En el período del rector Boris Rosanía Salive quien inicia la construcción de este edificio la cual fue finalizada en el año 1975')
   building.places.where(name: 'Dirección de Tecnología Informática y de Comunicaciones').first_or_create
   building.places.where(name: 'Salón de Proyecciones').first_or_create
   building.places.where(name: 'Decanatura División Ciencias Jurídicas').first_or_create
@@ -267,7 +267,7 @@ Building.where(longitude: -74.85027549680120, latitude: 11.018905739228677, name
   building.places.where(name: 'Guacacole: Lo mejor de la comida mexicana').first_or_create
   building.places.where(name: 'Gli Amici: Pizzas, Lasagnas, Pastas y todo lo que nos fascina de la cocina Italiana').first_or_create
   building.places.where(name: 'Punto Light: Sanwiches, Jugos, Frutas y Verduras para mantener tu figura').first_or_create
-  building.places.where(name: 'Postres y Café( Un punto para darle gusto a tus antojos!').first_or_create
+  building.places.where(name: 'Postres y Café: Un punto para darle gusto a tus antojos!').first_or_create
 end
 
 # Bloque Biblioteca
@@ -284,6 +284,16 @@ Building.where(longitude: -74.85044675180211, latitude: 11.017785085276735, name
   building.places.where(name: 'Coordinación de Sistemas de información Digital').first_or_create
   building.places.where(name: 'Coordinación de atención al usuario').first_or_create
   building.places.where(name: 'Videoteca').first_or_create
+end
+
+FoodVenue.where(name: 'DuNord Plaza').first_or_create do |venue|
+  venue.menus.where(name: 'Guacamole').first_or_create(image: '')
+  venue.menus.where(name: 'Punto Light').first_or_create(image: '')
+end
+
+FoodVenue.where(name: 'Cafe DuNord').first_or_create do |venue|
+  venue.menus.where(name: '').first_or_create(image: '')
+  venue.menus.where(name: '').first_or_create(image: '')
 end
 
 #
