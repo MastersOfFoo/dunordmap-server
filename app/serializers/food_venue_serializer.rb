@@ -1,5 +1,5 @@
 class FoodVenueSerializer < ActiveModel::Serializer
   attributes :name
 
-  has_many :foods
+  has_many :menus
 end

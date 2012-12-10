@@ -286,7 +286,7 @@ Building.where(longitude: -74.85044675180211, latitude: 11.017785085276735, name
   building.places.where(name: 'Videoteca').first_or_create
 end
 
-FoodVenue.where(name: 'Du Nord Plaza').first_or_create do |venue|
+FoodVenue.where(name: 'Du Nord Plaza').first_or_create.tap do |venue|
   venue.menus.where(name: 'Guacamole').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_plaza/guacamole.png')
   venue.menus.where(name: 'Punto Light').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_plaza/punto_light.png')
   venue.menus.where(name: 'Casa de la plaza').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_plaza/casa_de_la_plaza.png')
@@ -294,7 +294,7 @@ FoodVenue.where(name: 'Du Nord Plaza').first_or_create do |venue|
   venue.menus.where(name: 'Postres y cafe').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_plaza/postres_y_cafe.png')  
 end
 
-FoodVenue.where(name: 'Cafe Du Nord').first_or_create do |venue|
+FoodVenue.where(name: 'Cafe Du Nord').first_or_create.tap do |venue|
   venue.menus.where(name: 'Postres y bebidas').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/cafe_du_nord/postres_y_bebidas.jpg')
   venue.menus.where(name: 'Arroces, aves y pescados').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/cafe_du_nord/arroces_aves_y_pescados.jpg')
   venue.menus.where(name: 'Carnes y addicionales').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/cafe_du_nord/carnes_y_addicionales.jpg')
@@ -305,7 +305,7 @@ FoodVenue.where(name: 'Cafe Du Nord').first_or_create do |venue|
   venue.menus.where(name: 'Entradas, cremas y sopas').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/cafe_du_nord/entradas_cremas_y_sopas.jpg')
 end
 
-FoodVenue.where(name: 'Du Nord Express').first_or_create do |venue|
+FoodVenue.where(name: 'Du Nord Express').first_or_create.tap do |venue|
   venue.menus.where(name: 'Chuzos, perros, sandwiches y hamburguesas').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_express/chuzos_perros_sandwiches_y_hamburguesas.jpg')
   venue.menus.where(name: 'Picadas, addicionales, fuertes y bebidas').first_or_create(image: 'http://dunordmap.s3.amazonaws.com/du_nord_express/picadas_addicionales_fuertes_y_bebidas.jpg')
 end

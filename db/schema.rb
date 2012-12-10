@@ -31,6 +31,7 @@ ActiveRecord::Schema.define(:version => 20121122162327) do
 
   create_table "menus", :force => true do |t|
     t.string   "image"
+    t.string   "name"
     t.integer  "food_venue_id"
     t.datetime "created_at",    :null => false
     t.datetime "updated_at",    :null => false

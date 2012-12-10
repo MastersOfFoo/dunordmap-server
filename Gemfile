@@ -8,6 +8,8 @@ gem 'active_model_serializers', github: 'josevalim/active_model_serializers'
 
 gem 'kdtree'
 
+gem 'puma'
+
 group :development do
   gem 'sqlite3'
 end
